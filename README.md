@@ -62,7 +62,7 @@ Always allowed: /dev/*; outside the project also /tmp, /private/tmp, /var/tmp, /
 
 ## Install
 
-You need Claude Code with mods (function hooks). It was tested on 2.1.285.
+You need Claude Code with mods (function hooks); tested on 2.1.285 and 2.1.291. Mods are in early access: if the CLI says hooks modules are not turned on, start it as `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1 claude`.
 
 From the marketplace in this repo:
 
