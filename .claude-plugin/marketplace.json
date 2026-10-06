@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "no-shell-edits",
+  "description": "no-shell-edits: keep Claude's file changes in Edit/Write, where they have a diff and /rewind",
+  "owner": { "name": "Daniil Bystrov", "url": "https://github.com/Jvrd97" },
+  "plugins": [
+    {
+      "name": "no-shell-edits",
+      "description": "Stop Claude from editing files through Bash (sed -i, heredocs, echo >, tee, python -c) and point it to Edit/Write.",
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/Jvrd97/claude-no-shell-edits"
+    }
+  ]
+}

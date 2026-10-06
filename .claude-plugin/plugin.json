@@ -1,0 +1,38 @@
+{
+  "name": "no-shell-edits",
+  "version": "0.1.0",
+  "description": "Stop Claude from editing files through Bash (sed -i, heredocs, echo >, tee, python -c) and point it to Edit/Write, so every change shows as a diff and /rewind can undo it.",
+  "author": { "name": "Daniil Bystrov", "url": "https://github.com/Jvrd97" },
+  "homepage": "https://github.com/Jvrd97/claude-no-shell-edits",
+  "repository": "https://github.com/Jvrd97/claude-no-shell-edits",
+  "license": "MIT",
+  "keywords": ["mod", "bash", "guard", "edit", "rewind", "diff"],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "mode": {
+      "type": "string",
+      "title": "Mode",
+      "description": "deny refuses the command and tells Claude to use Edit/Write; warn lets it run and adds that note to the result Claude reads.",
+      "default": "deny",
+      "options": ["deny", "warn"]
+    },
+    "blockReads": {
+      "type": "boolean",
+      "title": "Block shell reads",
+      "description": "Also refuse cat/head/tail/less/more of a single file and tell Claude to use Read.",
+      "default": false
+    },
+    "allowPaths": {
+      "type": "string",
+      "title": "Allowed paths",
+      "description": "Comma-separated globs the shell may write. A glob without / matches a file name anywhere (*.log); one with / matches from the project root (.git/**, dist/**). /dev is always allowed; /tmp, /var/folders and $TMPDIR are allowed outside the project.",
+      "default": "*.log,.git/**"
+    },
+    "statusLine": {
+      "type": "boolean",
+      "title": "Status line count",
+      "description": "Pin 'no-shell-edits: N blocked' under the prompt once something was blocked.",
+      "default": false
+    }
+  }
+}
