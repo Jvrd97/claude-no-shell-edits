@@ -13,7 +13,7 @@ A Claude Code mod that stops Claude from editing files through Bash (`sed -i`, h
 
 ## Why
 
-In auto mode Claude often edits files through the shell instead of its file tools. Such a change has no diff in the transcript, skips your review, and `/rewind` cannot undo it, because checkpoints only track Edit and Write. Three open issues ask for a fix; together they have about 370 👍 and 151 comments, open since August 2026 without a reply from Anthropic:
+In auto mode Claude often edits files through the shell instead of its file tools. Such a change has no diff in the transcript, skips your review, and `/rewind` cannot undo it, because checkpoints only track Edit and Write. Three open issues ask for a fix, with about 250 👍 together (checked 2026-10-06):
 
 - [#87971](https://github.com/anthropics/claude-code/issues/87971)
 - [#88041](https://github.com/anthropics/claude-code/issues/88041)
